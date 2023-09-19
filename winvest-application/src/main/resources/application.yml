@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://ip:port;databaseName=your-db-name;trustServerCertificate=true;Trusted_Connection=True;
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: your-db-username
+    password: your-db-password
+  jpa:
+    hibernate:
+      format_sql: true
+
+application:
+  security:
+    jwt:
+      secret-key: your-jwt-secret-key
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days 
